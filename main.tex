@@ -1,0 +1,59 @@
+\documentclass[12pt,a4paper,2sides]{report}
+
+\usepackage{lib/lib} %import libary from lib.sty %
+
+\onehalfspacing %Giãn dòng phân nửa.
+%Thêm dữ liệu vào intro.tex qua dòng lệnh.
+%Addition into data at intro.tex file via command.
+\newcommand{\khoa}{công nghệ thông tin}
+\newcommand{\bai}{bài}
+\newcommand{\de}{tên đề tài}
+\newcommand{\monhoc}{môn học}
+\newcommand{\gvhd}{Tên giảng viên hướng dẫn}
+\newcommand{\tacgia}{Tên tác giả}
+\newcommand{\mstacgia}{Mã tác giả}
+\newcommand{\svhai}{}
+\newcommand{\msvhai}{}
+\newcommand{\svba}{}
+\newcommand{\msvba}{}
+\newcommand{\svtu}{}
+\newcommand{\msvtu}{}
+\newcommand{\nam}{2021}
+%Acknowledge page (the second page in docs)
+\newcommand{\loicamon}{
+		Với những kiến thức em tích lũy được qua những ngày học tập, đây là kết quả của quá trình học tập của em và nhóm cùng đưa ra ý kiến và thảo luận, tổng hợp kiến thức lại với nhau.\\
+}
+%tabl
+\begin{document}	
+\pagenumbering{roman}
+\input{intro.tex}
+\newpage
+\clearpage
+%--------------Mục lục
+\dominitoc
+\tableofcontents %pages
+%if you want to show table of contents of chapter, set \dominitoc under line \chapter{name}
+%\listoffigures %pictures
+\newpage
+\clearpage
+%\setcounter{page}{-1}
+%\listoftables
+%\begin{figure/tables}
+%\centering
+%Sourcode/Import
+%\caption
+%\end{fugure/tables}
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\clearpage
+%\Control to file to create subfile.\\
+\input{part1.tex}
+%\input{part2.tex}
+%\input{part3.tex}
+\begin{thebibliography}{5}
+	\bibitem{}  Tài liệu học tập trường đại học Tôn Đức Thắng.
+	\bibitem{}
+	\bibitem{}
+\end{thebibliography}
+\end{document}
